@@ -1,0 +1,118 @@
+Đảng: Đảng Cộng sản Việt Nam
+NN: Nhà nước
+CP: Chính phủ
+QH: Quốc hội
+UBND: Ủy ban nhân dân
+HĐND: Hội đồng nhân dân
+MTTQVN: Mặt trận Tổ quốc Việt Nam
+TAND: Tòa án nhân dân
+VKSND: Viện kiểm sát nhân dân
+TW: Trung ương
+TP: Thành phố
+TT: Thị trấn
+TX: Thị xã
+Q: Quận
+H: Huyện
+P: Phường
+X: Xã
+VN: Việt Nam
+VSIP: Khu công nghiệp Việt Nam - Singapore
+ASEAN: Hiệp hội các quốc gia Đông Nam Á
+LHQ: Liên Hợp Quốc
+WTO: Tổ chức Thương mại Thế giới
+GDP: Tổng sản phẩm quốc nội
+CPI: Chỉ số giá tiêu dùng
+FDI: Vốn đầu tư trực tiếp nước ngoài
+ODA: Viện trợ phát triển chính thức
+DN: Doanh nghiệp
+KCN: Khu công nghiệp
+KKT: Khu kinh tế
+CK: Chứng khoán
+VN-Index: Chỉ số chứng khoán Việt Nam
+HNX-Index: Chỉ số chứng khoán Hà Nội
+UPCoM-Index: Chỉ số UPCoM
+NHNN: Ngân hàng Nhà nước Việt Nam
+TCTD: Tổ chức tín dụng
+TMĐT: Thương mại điện tử
+ĐTTC: Đầu tư tài chính
+BĐS: Bất động sản
+USD: Đô la Mỹ
+EUR: Euro
+JPY: Yên Nhật
+VNĐ: Việt Nam Đồng
+CNTT: Công nghệ thông tin
+KHCN: Khoa học và công nghệ
+AI: Trí tuệ nhân tạo
+IoT: Internet of Things
+Big Data: Dữ liệu lớn
+VR: Thực tế ảo
+AR: Thực tế tăng cường
+5G: Mạng di động thế hệ thứ năm
+ICT: Công nghệ thông tin và truyền thông
+R&D: Nghiên cứu và phát triển
+ĐH: Đại học
+CĐ: Cao đẳng
+THPT: Trung học phổ thông
+THCS: Trung học cơ sở
+TH: Tiểu học
+BGDĐT: Bộ Giáo dục và Đào tạo
+BYT: Bộ Y tế
+BV: Bệnh viện
+TTYT: Trung tâm y tế
+BS: Bác sĩ
+TS: Tiến sĩ
+ThS: Thạc sĩ
+GS: Giáo sư
+PGS: Phó Giáo sư
+HIV: Virus gây suy giảm miễn dịch ở người
+AIDS: Hội chứng suy giảm miễn dịch mắc phải
+QĐNDVN: Quân đội nhân dân Việt Nam
+CAND: Công an nhân dân
+QSND: Quân sự nhân dân
+PKKQ: Phòng không không quân
+HQNDVN: Hải quân nhân dân Việt Nam
+BĐBP: Bộ đội biên phòng
+CSGT: Cảnh sát giao thông
+PCCC: Phòng cháy chữa cháy
+TTXVN: Thông tấn xã Việt Nam
+VTV: Đài Truyền hình Việt Nam
+VOV: Đài Tiếng nói Việt Nam
+TT: Thông tin
+PT: Phát thanh
+TH: Truyền hình
+GT: Giao thông
+VT: Vận tải
+XD: Xây dựng
+CTGT: Công trình giao thông
+QL: Quốc lộ
+TL: Tỉnh lộ
+ĐB: Đường bộ
+ĐS: Đường sắt
+HK: Hàng không
+ĐTNĐ: Đường thủy nội địa
+ĐT: Điện thoại
+CN: Công nghiệp
+NN: Nông nghiệp
+TNMT: Tài nguyên và môi trường
+VH-TT-DL: Văn hóa - Thể thao - Du lịch
+CNH-HĐH: Công nghiệp hóa - Hiện đại hóa
+KT-XH: Kinh tế - Xã hội
+VSATTP: Vệ sinh an toàn thực phẩm
+BHXH: Bảo hiểm xã hội
+HN: Hà Nội
+HCM: Hồ Chí Minh
+ĐN: Đà Nẵng
+CT: Cần Thơ
+HP: Hải Phòng
+BD: Bình Dương
+ĐNai: Đồng Nai
+VT: Vũng Tàu
+Qn: Quảng Ninh
+ĐL: Đà Lạt
+NT: Nha Trang
+PT: Phan Thiết
+VT: Việt Trì
+LC: Lào Cai
+TB: Thái Bình
+ND: Nam Định
+TH: Thanh Hóa
