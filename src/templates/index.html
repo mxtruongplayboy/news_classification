@@ -74,6 +74,127 @@
                     required
                   ></textarea>
                 </div>
+
+                <!-- Model selection options -->
+                <div class="mb-4">
+                  <label class="form-label">
+                    <i class="fas fa-brain me-2"></i>Phương pháp phân loại
+                  </label>
+
+                  <!-- Main model selection tabs -->
+                  <ul class="nav nav-tabs" id="modelTypeTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="ml-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#ml-content"
+                        type="button"
+                        role="tab"
+                        aria-controls="ml-content"
+                        aria-selected="true"
+                      >
+                        <i class="fas fa-cogs me-2"></i>Machine Learning
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="dl-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#dl-content"
+                        type="button"
+                        role="tab"
+                        aria-controls="dl-content"
+                        aria-selected="false"
+                      >
+                        <i class="fas fa-network-wired me-2"></i>Deep Learning
+                      </button>
+                    </li>
+                  </ul>
+
+                  <!-- Tab content with sub-models -->
+                  <div
+                    class="tab-content p-3 border border-top-0 rounded-bottom"
+                    id="modelTypeContent"
+                  >
+                    <!-- Machine Learning models -->
+                    <div
+                      class="tab-pane fade show active"
+                      id="ml-content"
+                      role="tabpanel"
+                      aria-labelledby="ml-tab"
+                    >
+                      <div class="d-flex model-sub-selection">
+                        <div class="form-check model-option">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="modelType"
+                            id="logisticRegressionModel"
+                            value="logistic_regression_model"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="logisticRegressionModel"
+                          >
+                            <i class="fas fa-project-diagram me-2"></i>Logistic
+                            Regression
+                          </label>
+                        </div>
+                        <div class="form-check model-option">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="modelType"
+                            id="naiveBayesModel"
+                            value="naive_bayes_model"
+                          />
+                          <label class="form-check-label" for="naiveBayesModel">
+                            <i class="fas fa-calculator me-2"></i>Naive Bayes
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Deep Learning models -->
+                    <div
+                      class="tab-pane fade"
+                      id="dl-content"
+                      role="tabpanel"
+                      aria-labelledby="dl-tab"
+                    >
+                      <div class="d-flex model-sub-selection">
+                        <div class="form-check model-option">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="modelType"
+                            id="bigruModel"
+                            value="bigru_model"
+                          />
+                          <label class="form-check-label" for="bigruModel">
+                            <i class="fas fa-random me-2"></i>BiGRU
+                          </label>
+                        </div>
+                        <div class="form-check model-option">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="modelType"
+                            id="bilstmModel"
+                            value="bilstm_model"
+                          />
+                          <label class="form-check-label" for="bilstmModel">
+                            <i class="fas fa-code-branch me-2"></i>BiLSTM
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <button type="submit" class="btn btn-primary w-100">
                   <i class="fas fa-search me-2"></i>Phân loại
                 </button>
@@ -85,8 +206,11 @@
         <!-- Right section: Results -->
         <div class="col-md-6">
           <div class="card">
-            <div class="card-header">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
               <h4><i class="fas fa-chart-pie me-2"></i>Kết quả phân loại</h4>
+              <div id="modelTypeDisplay" class="badge rounded-pill"></div>
             </div>
             <div class="card-body">
               <!-- Topics section -->

@@ -3,6 +3,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const predictedTopicElement = document.getElementById("predictedTopic");
   const probabilitiesListElement = document.getElementById("probabilitiesList");
   const submitButton = textForm.querySelector("button[type='submit']");
+  const modelTypeDisplay = document.getElementById("modelTypeDisplay");
+  const modelTypeRadios = document.querySelectorAll('input[name="modelType"]');
+  const mlTab = document.getElementById("ml-tab");
+  const dlTab = document.getElementById("dl-tab");
+
+  // Initialize model type display
+  updateModelTypeBadge();
+
+  // Add event listeners to radio buttons
+  modelTypeRadios.forEach((radio) => {
+    radio.addEventListener("change", updateModelTypeBadge);
+  });
+
+  // Add event listeners to tab buttons for managing radio selection
+  mlTab.addEventListener("shown.bs.tab", () => {
+    // Select the first ML option if coming from DL tab
+    if (
+      !document
+        .querySelector('input[name="modelType"]:checked')
+        .value.includes("model")
+    ) {
+      document.getElementById("logisticRegressionModel").checked = true;
+      updateModelTypeBadge();
+    }
+  });
+
+  dlTab.addEventListener("shown.bs.tab", () => {
+    // Select the first DL option if coming from ML tab
+    if (
+      !document
+        .querySelector('input[name="modelType"]:checked')
+        .value.includes("lstm") &&
+      !document
+        .querySelector('input[name="modelType"]:checked')
+        .value.includes("gru")
+    ) {
+      document.getElementById("bigruModel").checked = true;
+      updateModelTypeBadge();
+    }
+  });
 
   // Add animation to the form elements
   animateFormElements();
@@ -46,6 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await response.json();
 
+      // Update model info badge
+      updateModelInfoBadge(data.model_info);
+
       // Display predicted topic with fade-in animation
       fadeIn(predictedTopicElement, data.predicted_topic);
 
@@ -64,9 +107,54 @@ document.addEventListener("DOMContentLoaded", () => {
     } finally {
       // Reset button state
       submitButton.disabled = false;
-      submitButton.textContent = "Phân loại";
+      submitButton.innerHTML = '<i class="fas fa-search me-2"></i>Phân loại';
     }
   });
+
+  // Function to update model type badge based on selection
+  function updateModelTypeBadge() {
+    const selectedModelType = document.querySelector(
+      'input[name="modelType"]:checked'
+    ).value;
+
+    // Set appropriate badge based on model type
+    if (selectedModelType === "logistic_regression_model") {
+      modelTypeDisplay.textContent = "Logistic Regression";
+      modelTypeDisplay.className = "badge rounded-pill badge-ml-logistic";
+    } else if (selectedModelType === "naive_bayes_model") {
+      modelTypeDisplay.textContent = "Naive Bayes";
+      modelTypeDisplay.className = "badge rounded-pill badge-ml-naive";
+    } else if (selectedModelType === "bigru_model") {
+      modelTypeDisplay.textContent = "BiGRU";
+      modelTypeDisplay.className = "badge rounded-pill badge-dl-bigru";
+    } else if (selectedModelType === "bilstm_model") {
+      modelTypeDisplay.textContent = "BiLSTM";
+      modelTypeDisplay.className = "badge rounded-pill badge-dl-bilstm";
+    }
+  }
+
+  // Function to update model info badge with response data
+  function updateModelInfoBadge(modelInfo) {
+    if (!modelInfo) return;
+
+    // Set appropriate badge class based on model type and name
+    if (modelInfo.type === "Machine Learning") {
+      if (modelInfo.name === "Logistic Regression") {
+        modelTypeDisplay.className = "badge rounded-pill badge-ml-logistic";
+      } else {
+        modelTypeDisplay.className = "badge rounded-pill badge-ml-naive";
+      }
+    } else {
+      if (modelInfo.name === "BiGRU") {
+        modelTypeDisplay.className = "badge rounded-pill badge-dl-bigru";
+      } else {
+        modelTypeDisplay.className = "badge rounded-pill badge-dl-bilstm";
+      }
+    }
+
+    // Display model name and accuracy
+    modelTypeDisplay.textContent = `${modelInfo.name} (${modelInfo.accuracy})`;
+  }
 
   // Function to validate form
   function validateForm() {
