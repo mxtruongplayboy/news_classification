@@ -1,0 +1,12 @@
+flask
+werkzeug
+py_vncorenlp
+tqdm
+pandas
+scikit-learn
+scipy
+nltk
+seaborn
+matplotlib
+keras
+tensorflow
